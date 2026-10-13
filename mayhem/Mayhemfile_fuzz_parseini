@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/fio/fuzz-parseini
+project: savantenvs/fio
+target: fuzz_parseini-mined-e4d9a7b
+cmds:
+  - cmd: /mayhem/fuzz_parseini
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_parseini-mined-e4d9a7b/testsuite
